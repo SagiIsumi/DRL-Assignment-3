@@ -9,3 +9,6 @@ torchvision==0.19.1
 tqdm==4.67.1
 urllib3==2.2.3
 wandb==0.19.10
+numpy==1.23.5
+gym==0.23.1
+gym_super_mario_bros
