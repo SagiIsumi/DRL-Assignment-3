@@ -1,5 +1,6 @@
 argparse
 nes-py
+opencv-python
 requests==2.32.3
 tensorboard==2.14.0
 tensorboard-data-server==0.7.2
