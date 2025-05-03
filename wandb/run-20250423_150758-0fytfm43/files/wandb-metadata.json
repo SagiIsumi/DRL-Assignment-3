@@ -1,0 +1,43 @@
+{
+  "os": "Linux-5.15.0-134-generic-x86_64-with-glibc2.10",
+  "python": "CPython 3.8.0",
+  "startedAt": "2025-04-23T07:07:58.543998Z",
+  "args": [
+    "--track"
+  ],
+  "program": "-m ppo",
+  "git": {
+    "remote": "https://github.com/SagiIsumi/DRL-Assignment-3.git",
+    "commit": "3d4545276a82479aadb6952ae08376fb365a8d9e"
+  },
+  "email": "r13944046@ntu.edu.tw",
+  "root": "/home/robotlab/Desktop/isumi/DRL/DRL-Assignment-3",
+  "host": "robotlab-MS-7C84",
+  "executable": "/home/robotlab/miniconda3/envs/drl-3/bin/python",
+  "cpu_count": 16,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "268897980416",
+      "used": "229237379072"
+    }
+  },
+  "memory": {
+    "total": "33566126080"
+  },
+  "cpu": {
+    "count": 16,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3080",
+      "memoryTotal": "12884901888",
+      "cudaCores": 8960,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.5"
+}

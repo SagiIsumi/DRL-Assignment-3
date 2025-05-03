@@ -1,0 +1,16 @@
+diff --git a/eval.cpython-38-x86_64-linux-gnu.so b/eval.cpython-38-x86_64-linux-gnu.so
+old mode 100755
+new mode 100644
+diff --git a/meta.xml b/meta.xml
+index 4c62c72..ba19a07 100644
+--- a/meta.xml
++++ b/meta.xml
+@@ -1,6 +1,6 @@
+ <?xml version="1.0"?>
+ <catalog>
+    <info>
+-      <name>r13922027</name> <!-- Replace r00000000 with your student ID -->
++      <name>r13522813</name> <!-- Replace r00000000 with your student ID -->
+    </info>
+ </catalog>
+\ No newline at end of file

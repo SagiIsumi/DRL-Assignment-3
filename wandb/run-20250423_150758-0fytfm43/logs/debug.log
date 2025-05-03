@@ -1,0 +1,24 @@
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_setup.py:_flush():68] Configure stats pid to 889614
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_setup.py:_flush():68] Loading settings from /home/robotlab/.config/wandb/settings
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_setup.py:_flush():68] Loading settings from /home/robotlab/Desktop/isumi/DRL/DRL-Assignment-3/wandb/settings
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /home/robotlab/Desktop/isumi/DRL/DRL-Assignment-3/wandb/run-20250423_150758-0fytfm43/logs/debug.log
+2025-04-23 15:07:58,472 INFO    MainThread:889614 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /home/robotlab/Desktop/isumi/DRL/DRL-Assignment-3/wandb/run-20250423_150758-0fytfm43/logs/debug-internal.log
+2025-04-23 15:07:58,512 INFO    MainThread:889614 [wandb_init.py:init():852] calling init triggers
+2025-04-23 15:07:58,512 INFO    MainThread:889614 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'exp_name': 'ppo', 'gym_id': 'SuperMarioBrosRandomStages-v0', 'learning_rate': 0.00025, 'seed': 1, 'total_time_step': 25000, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'ppo-implementation-details', 'wandb_entity': None, 'capture_video': False, 'num_envs': 4, 'num_steps': 128, 'anneal_lr': True, 'gae': True, 'gamma': 0.99, 'gae_lambda': 0.95, 'num_minibatches': 4, 'update_epochs': 4, 'norm_adv': True, 'clip_coef': 0.2, 'clip_vloss': True, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': None, 'batch_size': 512, 'minibatch_size': 128, '_wandb': {}}
+2025-04-23 15:07:58,512 INFO    MainThread:889614 [wandb_init.py:init():893] starting backend
+2025-04-23 15:07:58,512 INFO    MainThread:889614 [wandb_init.py:init():897] sending inform_init request
+2025-04-23 15:07:58,543 INFO    MainThread:889614 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-23 15:07:58,543 INFO    MainThread:889614 [wandb_init.py:init():907] backend started and connected
+2025-04-23 15:07:58,545 INFO    MainThread:889614 [wandb_init.py:init():1002] updated telemetry
+2025-04-23 15:07:58,559 INFO    MainThread:889614 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-04-23 15:07:59,162 INFO    MainThread:889614 [wandb_init.py:init():1101] starting run threads in backend
+2025-04-23 15:07:59,256 INFO    MainThread:889614 [wandb_run.py:_console_start():2566] atexit reg
+2025-04-23 15:07:59,256 INFO    MainThread:889614 [wandb_run.py:_redirect():2414] redirect: wrap_raw
+2025-04-23 15:07:59,256 INFO    MainThread:889614 [wandb_run.py:_redirect():2483] Wrapping output streams.
+2025-04-23 15:07:59,256 INFO    MainThread:889614 [wandb_run.py:_redirect():2506] Redirects installed.
+2025-04-23 15:07:59,258 INFO    MainThread:889614 [wandb_init.py:init():1147] run started, returning control to user process
+2025-04-23 15:07:59,258 INFO    MainThread:889614 [wandb_run.py:_tensorboard_callback():1638] tensorboard callback: ./runs/SuperMarioBrosRandomStages-v0_ppo_1_1745392077, True
+2025-04-23 15:07:59,302 INFO    MsgRouterThr:889614 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 2 handles.

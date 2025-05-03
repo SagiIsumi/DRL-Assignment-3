@@ -1,0 +1,14 @@
+# Python virsual environment 
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.pkl
+checkpoint/
+backup.py
+b2.py
+b3.py
+b4.py
+ppo.py
+segment_tree.py
+
