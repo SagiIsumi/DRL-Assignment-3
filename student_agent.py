@@ -4,6 +4,12 @@ import torch
 from DQN_agent import DQN_Mario
 import cv2
 
+
+seed=42
+np.random.seed(seed)  # Numpy 隨機
+torch.manual_seed(seed)  # CPU 上的 Torch 隨機
+torch.cuda.manual_seed(seed)  # 單張 GPU
+
 # Do not modify the input of the 'act' function and the '__init__' function. 
 class Agent(object):
     """Agent that acts randomly."""
