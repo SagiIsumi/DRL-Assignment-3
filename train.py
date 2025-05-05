@@ -84,6 +84,8 @@ class EpisodicLifeMario(gym.Wrapper):
 #                                stages=['1-1','1-2','1-3','1-4'])
 def make_env():
     env = gym_super_mario_bros.make("SuperMarioBros-v0")
+    # env = gym_super_mario_bros.make('SuperMarioBrosRandomStages-v0',
+    #                             stages=['1-1','1-2',])
     env = JoypadSpace(env, COMPLEX_MOVEMENT)
     env =MaxAndSkipEnv(env, 4)
     env = GrayScaleObservation(env, keep_dim=True)       # (1,H,W)    
@@ -92,13 +94,13 @@ def make_env():
     env = FrameStack(env, 4)                             # (4,84,84)
     return env
 env = make_env()
-output_index=4
+output_index=2
 video_path = f"random_agent_{output_index}.mp4"
 fps = 30
 writer = imageio.get_writer(video_path, fps=fps)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 load_path="./checkpoint/v1/qnet_4400.pth"
-agent = DQN_Mario(12)
+agent = DQN_Mario(12,load_path)
 # TODO: Determine the number of episodes for training
 # agent.q_net.load_state_dict(torch.load('./checkpoint/v1/qnet_500.pth',map_location=device))
 # agent.target_net.load_state_dict(agent.q_net.state_dict())
@@ -106,25 +108,18 @@ agent = DQN_Mario(12)
 
 def train():
     try:
-        num_episodes = 20000
+        num_episodes = 8000
         reward_history = []
         return_record = [0]
-        epsilon = 0.85
         for episode in range(num_episodes):
             state = env.reset()
             state = np.squeeze(state, axis=-1)
             state = np.ascontiguousarray(state)
             total_reward = 0
             for t in count():
-                # if total_reward > 1000:
-                #     sample=random.random()
-                #     if sample < epsilon:
-                #         action= agent.get_action(state, False, True)
-                #         epsilon = epsilon*0.99995
-                #     else:
-                #         action= agent.get_action(state, False)
+                # if episode%3==0:
+                #     action= agent.get_action(state, True)
                 # else:
-                #     action= agent.get_action(state, False)
                 action= agent.get_action(state, False)
                 # print(action)
                 obs, reward, done, info = env.step(action)

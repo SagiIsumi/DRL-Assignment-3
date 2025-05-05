@@ -20,9 +20,9 @@ logger.addHandler(stram_handler)
 batch_size= 128
 gamma = 0.99
 tau= 0.999
-lr=2.5e-4
+lr=5e-5
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-epsilon=0.00
+epsilon=0.01
 min_epsilon= 0.00
 eps_decay_rate=1e5
 print(f"device:{device}")
@@ -30,7 +30,7 @@ print(f"device:{device}")
 
 
 class NoisyLinear(nn.Module):
-    def __init__(self, in_features, out_features, std_init=1.5):
+    def __init__(self, in_features, out_features, std_init=0.5):
         super().__init__()
         self.in_features = in_features
         self.out_features = out_features
@@ -218,7 +218,7 @@ class DQN_Mario:
         # self.target_net.load_state_dict(target_net_state_dict)
         return
     def train(self):
-        if len(self.replaybuffer) < 10000:
+        if len(self.replaybuffer) < 30000:
             return
         experiences, indices, weights = self.replaybuffer.sample(batch_size)
         batch = Transition(*zip(*experiences))

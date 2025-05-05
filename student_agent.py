@@ -12,7 +12,7 @@ class Agent(object):
         self.observation_buffer=[]
         self.timer=0
         self.device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        load_path="qnet_4400.pth"
+        load_path="qnet_3000.pth"
         self.agent= DQN_Mario(12,load_path)
         self.buffer = np.zeros((2,240,256,3), dtype=np.uint8)
         shape=(84,84)
